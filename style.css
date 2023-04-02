@@ -1,0 +1,24 @@
+body 
+    { 
+    background: #181818;
+    background: -moz-linear-gradient(45deg, #334ee9 0%, #7393f1 100%);
+    background: -webkit-linear-gradient(45deg, #334ee9 0%, #7393f1 100%);
+    background: linear-gradient(45deg,#334ee9 0%, #7393f1 100%); 
+    }
+
+.navbar 
+    { 
+    /* background-color: aliceblue; */
+    align-items:center;
+    background-image: url('Images/Background.png'); width: auto;
+    /* background: -moz-linear-gradient(45deg, #334ee9 0%, #7393f1 50%);
+    background: -webkit-linear-gradient(45deg, #334ee9 0%, #7393f1 50%);
+    background: linear-gradient(45deg,#334ee9 0%, #7393f1 50%);  */
+    }
+
+ .navlist
+    {
+        margin: auto;
+        align-items:center;
+        display: inline;
+    }   
