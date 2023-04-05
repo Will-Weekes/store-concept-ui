@@ -21,4 +21,10 @@ body
         margin: auto;
         align-items:center;
         display: inline;
-    }   
+    }
+
+ .box
+    {
+        /* display: none; */
+        background:#181818;
+    }
