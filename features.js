@@ -1,8 +1,10 @@
 
-function toggleState (object) {
+function toggleState (object, state) {
     // var item = document.getElementById(object).style.display = "state";
     var item = document.getElementById(object);
-    item.style.display = "none";
+    // newState = toString(state);
+    
+    item.style.display = state;
     }
 
 
