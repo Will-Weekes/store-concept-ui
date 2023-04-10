@@ -14,3 +14,9 @@ function toggleState (object, state) {
     el.style.fontSize = "15px";
     el.style.backgroundColor = "#FFFFFF";
   }
+
+    function clearProductsTable() { //clears the table as displayed can be re-generated from the array again 
+        const productsTableBodyElement = document.querySelector("#products__table tbody");
+        productsTableBodyElement.remove();
+
+    }

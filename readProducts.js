@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", () =>{
     const addProductToTable = (product, index) => {
         
         const newProductHTML = `
-            <tr data-index="${index}"> // c
+            <tr data-index="${index}"> 
                 <td>${product.id}</td>
                 <td>${product.name}</td>
                 <td>${product.price}</td>
                 <td>${product.type}</td>
                 <td>${product.stock}</td>
                 <td>
-                    <img src="${product.image}" alt="${product.name}"/>
+                    <img id="productImgSmall" img src="${product.table_image}" alt="${product.name}"/>
                 </td>
             <tr>
         `;
@@ -26,6 +26,14 @@ document.addEventListener("DOMContentLoaded", () =>{
         productsTableBodyElement.innerHTML += newProductHTML;
 
     }
+// This will be a function to generate a filtered list from the array object - 
+    // const addProductToTableFiltered = (product, index, filter, value) =>{
+    //     if (filter != null && value && null) {
+
+    //     }
+
+
+    // }
 
     const addClickEventListenersToTableRows = () => {
         productsTableBodyElement.addEventListener("click", (event) => {
@@ -64,6 +72,16 @@ document.addEventListener("DOMContentLoaded", () =>{
         });
 
     };
+    
+    // function clearProductsTable() {
+    //     const productsTableBodyElement = document.querySelector("#products__table tbody");
+    //     productsTableBodyElement.remove();
+
+    // }
+    
+    
+
     loadProducts ();
     // alert("readProducts.js finished running");
 });
+
