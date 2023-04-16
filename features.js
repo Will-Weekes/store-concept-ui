@@ -10,13 +10,11 @@ function toggleState (object, state) {
 
     function changeElement(id) {
     var el = document.getElementById(id);
-    el.style.color = "red";
-    el.style.fontSize = "15px";
-    el.style.backgroundColor = "#FFFFFF";
+    el.style = hidden;  
   }
 
-    function clearProductsTable() { //clears the table as displayed can be re-generated from the array again 
+   /*  function clearProductsTable() { //clears the table as displayed can be re-generated from the array again 
         const productsTableBodyElement = document.querySelector("#products__table tbody");
         productsTableBodyElement.remove();
 
-    }
+    } */

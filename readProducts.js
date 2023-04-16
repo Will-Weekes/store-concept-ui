@@ -5,27 +5,43 @@ document.addEventListener("DOMContentLoaded", () =>{
     const loadingElement = document.querySelector("#products__loading");
     const productsTableElement = document.querySelector("#products__table");
     const productsTableBodyElement = document.querySelector("#products__table tbody")
+    const productsOverlayElement = document.querySelector("#products__overlay");
 
     if (loadingElement == null || productsTableElement ==null) return;
+    if (productsOverlayElement == null) return;
 
     const addProductToTable = (product, index) => {
         
         const newProductHTML = `
             <tr data-index="${index}"> 
+                <td>
+                    <img id="productImgSmall" img src="${product.table_image}" alt="${product.name}"/>
+                </td>
                 <td>${product.id}</td>
                 <td>${product.name}</td>
                 <td>${product.price}</td>
                 <td>${product.type}</td>
                 <td>${product.stock}</td>
-                <td>
-                    <img id="productImgSmall" img src="${product.table_image}" alt="${product.name}"/>
-                </td>
+                
             <tr>
         `;
         // alert("adding product" + index + "to table" );
         productsTableBodyElement.innerHTML += newProductHTML;
 
     }
+    const addProductToOverlay = (product,index) => {
+        const newOverlayHTML = `
+        <div id="controls"> 
+        <button id="close onclick="closeProductsOverlay()">Close</button>
+        </div>
+        <p id="title">${product.name}</p>
+        <p id="price">${product.price}</p>
+        <p id="type">${product.type}</p>
+        `;
+
+    }
+    
+
 // This will be a function to generate a filtered list from the array object - 
     // const addProductToTableFiltered = (product, index, filter, value) =>{
     //     if (filter != null && value && null) {
@@ -45,12 +61,12 @@ document.addEventListener("DOMContentLoaded", () =>{
             const product = products[rowElement.dataset.index || 0];
 
             alert(`You clicked on ${product.name} with ID of ${product.id}`);
-
+            // loadOverlay(${product.id});
         });
     };
 
 
-    let products = [];
+    var products = [];
 
     const loadProducts = () => {
         // alert("loadProducts started running");
@@ -73,15 +89,28 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     };
     
+    
     // function clearProductsTable() {
     //     const productsTableBodyElement = document.querySelector("#products__table tbody");
     //     productsTableBodyElement.remove();
 
     // }
     
-    
 
     loadProducts ();
     // alert("readProducts.js finished running");
 });
 
+function clearProductsTable() { //clears the table as displayed can be re-generated from the array again 
+    const productsTableBodyElement = document.querySelector("#products__table tbody");
+    productsTableBodyElement.remove();
+
+}
+function clearProductsOverlayContent(){ //removes the contents of the overlay
+    productsOverlayElement.innerHTML.remove();
+}
+
+function loadOverlay (i){
+    products.addProductToOverlay(i);
+
+}

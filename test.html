@@ -31,12 +31,14 @@
             </div>
         </div>
     
-        
+        <div id="products__overlay">
+            <p>Product</p>
+        </div>
     
         
-        <!-- <button type="button" onclick="loadProducts()">test</button> -->
+        
         <span><button onclick="clearProductsTable()">Test: Clear Table</button></span>
-        <!-- <span><button onclick="loadProducts();">Reload Products</button></span> -->
+        <span><button onclick="loadOverlay(1)">Test:Overlay</button></span>
         <div id="products">
 
             <div id="products__loading" class="hidden">
@@ -46,19 +48,19 @@
             <div id="productsArea">
                 <table id="products__table">
                     <thead>
-                        <tr>
+                        <tr id="products__tableHead"></th>
+                            <th>Product Image</th>
                             <th>Product ID</th>
                             <th>Product Name</th>
                             <th>Product Type</th>
                             <th>Product Price</th>
-                            <th>Product Image</th>
+                            <th>Number Available</th>
                         </tr>
                     </thead>
-            <tbody>
+                    <tbody>
 
-            </tbody>
+                    </tbody>
                 </table>
-
             </div>
         </div>        
     

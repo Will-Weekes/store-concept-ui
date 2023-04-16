@@ -4,6 +4,7 @@
         "name": "MacBook Pro ",   
         "price": "Laptop",
         "type": 2200,
+        "desc": "Apple outdoes themselves once again with the Apple Silicon Macbooks, excellent speed and power efficiency.",
         "stock": 30,
         "table_image": "/images/MBP_IMG.png"
     },
@@ -12,6 +13,7 @@
         "name": "Dell OptiPlex 2520",   
         "price": 750,
         "type": "Desktop",
+        "desc": "The new desktop by Dell",
         "stock": 45,
         "table_image":  "/images/DD_IMG.png"
     },
@@ -20,6 +22,7 @@
         "name": "Palm Rebirth 110",   
         "price": 249.99,
         "type": "Mobile",
+        "desc": "The palm PDA of the modern age",
         "stock": 10,
         "table_image" : "/images/Ph_IMG.png"
     },
@@ -28,6 +31,7 @@
         "name": "Silicon Graphics DeskMax 9900",   
         "price": 2049.99,
         "type": "Desktop",
+        "desc": "SGI are back, and better than ever. The DeskMax is ideal for lifting heavy graphics workloads",
         "stock": 0,
         "table_image" : "/images/Ph_IMG.png"
     },
@@ -36,6 +40,7 @@
         "name": "HP DeluxeDesk 980",   
         "price": 949.99,
         "type": "Desktop",
+        "desc": "HP's deluxe business desktop",
         "stock": 1,
         "table_image" : "/images/Ph_IMG.png"
     },
@@ -44,6 +49,7 @@
         "name": "Store Special Model 1",   
         "price": 499.99,
         "type": "Laptop",
+        "desc": "Affordable, unrivalled. When we say it's special, we mean it.",
         "stock": 10,
         "table_image" : "/images/Ph_IMG.png"
     }
