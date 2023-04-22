@@ -51,14 +51,16 @@ document.addEventListener("DOMContentLoaded", () =>{
             if (products.length < 1) return;
 
             const product = products[rowElement.dataset.index || 0];
-
-            alert(`You clicked on ${product.name} with ID of ${product.id}`);
-            // loadOverlay(${product.id});
+            const productNum = rowElement.dataset.index;
+            // alert(`You clicked on ${product.name} with ID of ${product.id}`);
+            // console.log("productNum is:" + productNum);
+            loadOverlay(productNum);
+            
         });
     };
 
 
-    // var products = [];
+  
 
     const loadProducts = () => {
         // alert("loadProducts started running");
@@ -81,13 +83,6 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     };
     
-    
-    // function clearProductsTable() {
-    //     const productsTableBodyElement = document.querySelector("#products__table tbody");
-    //     productsTableBodyElement.remove();
-
-    // }
-    
 
     loadProducts ();
     // alert("readProducts.js finished running");
@@ -99,33 +94,24 @@ function clearProductsTable() { //clears the table as displayed can be re-genera
 
 }
 function clearProductsOverlayContent(){ //removes the contents of the overlay
-    productsOverlayElement.innerHTML.remove();
+    productsOverlayElement.innerHTML = '';
 }
-// function addProductToOverlay () {
-//     const newOverlayHTML = `
-//     <div id="controls"> 
-//     <button id="close onclick="closeProductsOverlay()">Close</button>
-//     </div>
-//     <p id="title">products.product.name</p>
-//     <p id="price">${products.price}</p>
-//     <p id="type">${products.type}</p>
-//     `;
 
-// }
 function addProductToOverlay (_index) { // trying a different way
-    products = products[_index];
+    let product = products[_index];
     const newOverlayHTML = `
     <div id="controls"> 
     <button id="close onclick="closeProductsOverlay()">Close</button>
     </div>
-    <p id="title">products.product.name</p>
-    <p id="price">${products.price}</p>
-    <p id="type">${products.type}</p>
-    <p id="type">${products.desc}</p>
+    <p id="title">${product.name}</p>
+    <p id="price">${product.price}</p>
+    <p id="type">${product.type}</p>
+    <p id="type">${product.desc}</p>
     `;
     productsOverlayElement.innerHTML += newOverlayHTML;
 }
 function loadOverlay (i){
+    clearProductsOverlayContent ();
     addProductToOverlay(i);
 
 }
