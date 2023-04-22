@@ -1,7 +1,7 @@
 // alert("readProducts.js started running");
 // Credit: Original script written by  Martin Shaw https://github.com/martinshaw/
 let products = [];
-var productsOverlayElement;
+let productsOverlayElement;
 document.addEventListener("DOMContentLoaded", () =>{
     
     const loadingElement = document.querySelector("#products__loading");
@@ -97,21 +97,35 @@ function clearProductsOverlayContent(){ //removes the contents of the overlay
     productsOverlayElement.innerHTML = '';
 }
 
-function addProductToOverlay (_index) { // trying a different way
+function addProductToOverlay (_index) { // 
     let product = products[_index];
     const newOverlayHTML = `
     <div id="controls"> 
-    <button id="close onclick="closeProductsOverlay()">Close</button>
+    <button id="close" onclick="closeProductsOverlay()">Close</button>
     </div>
     <p id="title">${product.name}</p>
     <p id="price">${product.price}</p>
     <p id="type">${product.type}</p>
-    <p id="type">${product.desc}</p>
+    <p id="Description">${product.desc}</p>
     `;
     productsOverlayElement.innerHTML += newOverlayHTML;
 }
+function showOverlay (){
+    productsOverlayElement.style.display = 'block';
+}
+
+function hideOverlay (){
+    productsOverlayElement.style.display = 'none';
+}
+
 function loadOverlay (i){
     clearProductsOverlayContent ();
     addProductToOverlay(i);
+    showOverlay();
 
+}
+
+function closeProductsOverlay (){
+    hideOverlay ();
+    clearProductsOverlayContent ();
 }
