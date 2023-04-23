@@ -2,8 +2,8 @@
     {
         "id": 1,
         "name": "MacBook Pro ",   
-        "price": "Laptop",
-        "type": 2200,
+        "price": 2200,
+        "type": "Laptop",
         "desc": "Apple outdoes themselves once again with the Apple Silicon Macbooks, excellent speed and power efficiency.",
         "stock": 30,
         "table_image": "/images/MBP_IMG.png"

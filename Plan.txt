@@ -1,6 +1,11 @@
-add - Overlay with product details shows when product is clicked in list
+Idea:
 add - filter function to only show products in the productsTable with specific attributes
 add - Out of stock indicator 
 add - Mock "quantity" "add to basket" and "Purchase" functions that deduct quantity of X product from products.json
 add - Mock "backend" page where products.Json can be modified (change amount in stock e.c.t)
+add - Global background to display black transparent mask over all content when overlay is visible
+change - products__Overlay overlayContent always has the same dimensions irrespective of contents
+
+In Progress:
+add - Overlay with product details shows when product is clicked in list 
 add - CSS to make page look presentable 

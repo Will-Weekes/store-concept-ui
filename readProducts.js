@@ -100,13 +100,16 @@ function clearProductsOverlayContent(){ //removes the contents of the overlay
 function addProductToOverlay (_index) { // 
     let product = products[_index];
     const newOverlayHTML = `
-    <div id="controls"> 
-    <button id="close" onclick="closeProductsOverlay()">Close</button>
+    <div id="overlayContent">
+        <div id="overlayControls"> 
+            <button id="close" onclick="closeProductsOverlay()">Close</button>
+        </div>
+        <p id="overlayTitle">${product.name}</p>
+        <img id="overlayImage" img src="${product.table_image}" alt="product image"</img>
+        <p id="overlayPrice">${product.price}</p>
+        <p id="overlayType">${product.type}</p>
+        <p id="overlayDescription">${product.desc}</p>
     </div>
-    <p id="title">${product.name}</p>
-    <p id="price">${product.price}</p>
-    <p id="type">${product.type}</p>
-    <p id="Description">${product.desc}</p>
     `;
     productsOverlayElement.innerHTML += newOverlayHTML;
 }
