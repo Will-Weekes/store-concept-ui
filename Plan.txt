@@ -9,3 +9,4 @@ change - products__Overlay overlayContent always has the same dimensions irrespe
 In Progress:
 add - Overlay with product details shows when product is clicked in list 
 add - CSS to make page look presentable 
+add - "add to basket" function to store list of items and quantity in an array to be accessed later. 
