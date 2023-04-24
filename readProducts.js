@@ -2,6 +2,11 @@
 // Credit: Original script written by  Martin Shaw https://github.com/martinshaw/
 let products = [];
 let productsOverlayElement;
+const basketArray = [];//array to contain all items in basket
+function BasketItem (id,quantity){//constructor to create an object that holds a product id and given quantity. Each object will be stored in above array
+    this.id = id;
+    this.quantity = quantity;
+}
 document.addEventListener("DOMContentLoaded", () =>{
     
     const loadingElement = document.querySelector("#products__loading");
@@ -108,6 +113,7 @@ function addProductToOverlay (_index) { //
         <img id="overlayImage" img src="${product.table_image}" alt="product image"</img>
         <p id="overlayPrice">${product.price}</p>
         <p id="overlayType">${product.type}</p>
+        <button id="overlayAddToBasket" onclick="addProductToBasket(${product.id})">Add To Basket</button>
         <p id="overlayDescription">${product.desc}</p>
     </div>
     `;
@@ -131,4 +137,9 @@ function loadOverlay (i){
 function closeProductsOverlay (){
     hideOverlay ();
     clearProductsOverlayContent ();
+}
+function addProductToBasket (_basketItem){//adds the product to the basket
+    const item = new BasketItem(_basketItem,1);//create a new BasketItem w/ the product id that the function is passed and a quantity of 1
+    basketArray.push(item);//adds the new BasketItem to the basketArray
+    console.log(basketArray);// for debugging - read out the whole basketArray to the console when an item is added
 }

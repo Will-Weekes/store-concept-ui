@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "name": "MacBook Pro ",   
         "price": 2200,
         "type": "Laptop",
@@ -9,7 +9,7 @@
         "table_image": "/images/MBP_IMG.png"
     },
     {
-        "id": 2,
+        "id": 1,
         "name": "Dell OptiPlex 2520",   
         "price": 750,
         "type": "Desktop",
@@ -18,7 +18,7 @@
         "table_image":  "/images/DD_IMG.png"
     },
     {
-        "id": 3,
+        "id": 2,
         "name": "Palm Rebirth 110",   
         "price": 249.99,
         "type": "Mobile",
@@ -27,7 +27,7 @@
         "table_image" : "/images/Ph_IMG.png"
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Silicon Graphics DeskMax 9900",   
         "price": 2049.99,
         "type": "Desktop",
@@ -36,7 +36,7 @@
         "table_image" : "/images/Ph_IMG.png"
     },
     {
-        "id": 5,
+        "id": 4,
         "name": "HP DeluxeDesk 980",   
         "price": 949.99,
         "type": "Desktop",
@@ -45,7 +45,7 @@
         "table_image" : "/images/Ph_IMG.png"
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Store Special Model 1",   
         "price": 499.99,
         "type": "Laptop",
