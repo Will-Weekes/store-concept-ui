@@ -1,7 +1,10 @@
 // alert("readProducts.js started running");
 // Credit: Original script written by  Martin Shaw https://github.com/martinshaw/
 let products = [];
+let basketAreaElement;
 let productsOverlayElement;
+let basketTableElement;
+let basketTableBodyElement;
 const basketArray = [];//array to contain all items in basket
 function BasketItem (id,quantity){//constructor to create an object that holds a product id and given quantity. Each object will be stored in above array
     this.id = id;
@@ -13,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () =>{
     const productsTableElement = document.querySelector("#products__table");
     const productsTableBodyElement = document.querySelector("#products__table tbody")
     productsOverlayElement = document.querySelector("#products__overlay");
+    basketAreaElement = document.querySelector("#basketArea");
+    basketTableElement = document.querySelector("#basket__Table");
+    basketTableBodyElement = document.querySelector("#basket__Table tbody");
 
     if (loadingElement == null || productsTableElement ==null) return;
     if (productsOverlayElement == null) return;
@@ -142,4 +148,8 @@ function addProductToBasket (_basketItem){//adds the product to the basket
     const item = new BasketItem(_basketItem,1);//create a new BasketItem w/ the product id that the function is passed and a quantity of 1
     basketArray.push(item);//adds the new BasketItem to the basketArray
     console.log(basketArray);// for debugging - read out the whole basketArray to the console when an item is added
+}
+function readBasket ()
+{
+    console.log(basketArray);
 }

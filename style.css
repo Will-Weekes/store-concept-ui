@@ -84,6 +84,9 @@ ul#horizontal-list li {
     border-radius: 10px;
 }
 
+#basketArea{
+    display: none;
+}
 
 #overlayImage{
     max-width: 200px;

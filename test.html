@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,20 +21,30 @@
     </head>    
     
     <div class="navbar">
+        
             <div class="table"></div>
                 
-                    <hr>
+                <hr>
                         <nav>
                             <ul id="horizontal-list">
+                                
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="products.html">Desktops</a></li>
                                 <li><a href="products.html">Laptops</a></li>
                                 <li><a href="products.html">Components</a></li>
                                 <li><a href="products.html">Spare Parts</a></li>
                                 <li><a href="products.html">Consumables</a></li>
+                                <li id="basketButton"><button onclick="readBasket()">Basket</button></li>
                             </ul>
+                            <div id="basketArea">
+                                <table id="basket__Table">
+                                    <tbody>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
                     </nav>
-                    <hr>
+                </hr>
             </div>
         </div>
     
